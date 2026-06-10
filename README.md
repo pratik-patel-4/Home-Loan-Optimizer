@@ -60,7 +60,6 @@ npm run preview
 ## Project Structure
 
 ```
-home-loan-optimizer/
 ├── public/                      # Static assets
 │   ├── favicon.svg
 │   └── icons.svg

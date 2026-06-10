@@ -239,7 +239,7 @@ Deploy directly from your GitHub repository.
    Add base path:
    ```typescript
    export default defineConfig({
-     base: '/home-loan-optimizer/',
+     base: '/Home-Loan-Optimizer/',
      // ... other config
    })
    ```

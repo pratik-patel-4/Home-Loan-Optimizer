@@ -6,7 +6,7 @@
  */
 
 import { ComparisonResult, LoanDetails } from '@/types/loan';
-import { calculateEMI, calculateTenure, calculateRemainingInterest } from './emi';
+import { calculateTenure, calculateRemainingInterest } from './emi';
 
 /** Number of months in a year */
 const MONTHS_IN_YEAR = 12;
@@ -127,7 +127,7 @@ function calculateInterestPaidOverPeriod(
 function calculateBreakEvenMonths(
   loanRate: number,
   investmentRate: number,
-  amount: number
+  _amount: number
 ): number {
   if (investmentRate <= loanRate) {
     // Investment rate is lower, prepayment is always better

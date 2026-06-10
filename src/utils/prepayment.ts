@@ -5,7 +5,7 @@
 
 import type { LoanDetails, PrepaymentDetails, PrepaymentResult } from '../types/loan';
 import { calculateEMI, calculateTenure } from './emi';
-import { generateAmortizationSchedule, calculateLoanHealth } from './amortization';
+import { generateAmortizationSchedule } from './amortization';
 import { addMonthsToDate } from './date';
 
 /**
@@ -35,6 +35,7 @@ export function calculatePrepaymentImpact(
       newEMI: emi,
       newTenure: remainingMonths,
       newClosureDate: addMonthsToDate(startDate, remainingMonths),
+      newPrincipal: principal,
     };
   }
   
@@ -81,6 +82,7 @@ export function calculatePrepaymentImpact(
     newEMI: Math.round(newEMI * 100) / 100,
     newTenure,
     newClosureDate,
+    newPrincipal: Math.round(newPrincipal * 100) / 100,
   };
 }
 

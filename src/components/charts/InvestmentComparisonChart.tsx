@@ -58,7 +58,6 @@ export const InvestmentComparisonChart: React.FC<InvestmentComparisonChartProps>
   prepaymentSavings,
   investmentReturns,
   loanInterestPaid,
-  investmentGain,
   isLoading = false,
 }) => {
   // Show loading skeleton

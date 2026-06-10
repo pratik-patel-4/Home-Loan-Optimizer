@@ -15,7 +15,6 @@ import {
   Calendar,
   TrendingUp,
   AlertCircle,
-  Clock,
   IndianRupee,
   Info
 } from 'lucide-react';

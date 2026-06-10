@@ -78,6 +78,7 @@ export function calculateBalanceTransferBenefit(
     breakEvenMonths: Math.min(breakEvenMonths, 999999),
     monthsSaved: Math.max(0, monthsSaved),
     newClosureDate,
+    newEMI: Math.round(newEMI * 100) / 100,
   };
 }
 

@@ -102,7 +102,7 @@ export function calculateLoanHealth(
   principal: number,
   annualRate: number,
   emi: number,
-  remainingMonths: number,
+  _remainingMonths: number,
   startDate: Date
 ): LoanHealth {
   // Generate amortization schedule to get accurate calculations

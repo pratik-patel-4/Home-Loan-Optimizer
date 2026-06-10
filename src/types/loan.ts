@@ -66,6 +66,8 @@ export interface BalanceTransferResult {
   monthsSaved: number;
   /** New expected closure date */
   newClosureDate: Date;
+  /** New EMI amount after balance transfer */
+  newEMI: number;
 }
 
 /**
@@ -97,6 +99,8 @@ export interface PrepaymentResult {
   newTenure: number;
   /** New expected closure date */
   newClosureDate: Date;
+  /** New principal amount after prepayment */
+  newPrincipal: number;
 }
 
 /**

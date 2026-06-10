@@ -16,12 +16,6 @@ const SECTION_80C_LIMIT = 150000;
 /** Maximum deduction under Section 24(b) for self-occupied property */
 const SECTION_24B_SELF_OCCUPIED_LIMIT = 200000;
 
-/** Section 24(b) has no limit for let-out property */
-const SECTION_24B_LET_OUT_UNLIMITED = true;
-
-/** Additional deduction under Section 80EEA for first-time buyers */
-const SECTION_80EEA_LIMIT = 150000;
-
 /** Standard tax bracket assumption (30%) */
 const TAX_RATE = 0.30;
 

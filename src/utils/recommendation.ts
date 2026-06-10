@@ -4,7 +4,7 @@
  */
 
 import type { LoanHealth, BalanceTransferResult, PrepaymentResult } from '../types/loan';
-import type { Recommendation, RecommendationType } from '../types/recommendation';
+import type { Recommendation } from '../types/recommendation';
 
 /**
  * Generate a recommendation based on loan health and optimization results
@@ -160,7 +160,7 @@ export function calculateHealthScore(interestBurden: number): string {
  * @returns Array of recommendations sorted by estimated savings (highest first)
  */
 export function generateAllRecommendations(
-  loanHealth: LoanHealth,
+  _loanHealth: LoanHealth,
   balanceTransferResult: BalanceTransferResult | null,
   prepaymentResult: PrepaymentResult | null
 ): Recommendation[] {

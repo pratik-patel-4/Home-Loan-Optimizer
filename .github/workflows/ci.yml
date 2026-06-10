@@ -14,6 +14,10 @@ jobs:
       matrix:
         node-version: [18.x, 20.x]
     
+    defaults:
+      run:
+        working-directory: home-loan-optimizer
+    
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
@@ -26,19 +30,13 @@ jobs:
         cache-dependency-path: home-loan-optimizer/package-lock.json
     
     - name: Install dependencies
-      run: |
-        cd home-loan-optimizer
-        npm ci
+      run: npm ci
     
     - name: Run TypeScript type check
-      run: |
-        cd home-loan-optimizer
-        npm run type-check || npx tsc --noEmit
+      run: npx tsc --noEmit
     
     - name: Build application
-      run: |
-        cd home-loan-optimizer
-        npm run build
+      run: npm run build
     
     - name: Upload build artifacts
       uses: actions/upload-artifact@v4

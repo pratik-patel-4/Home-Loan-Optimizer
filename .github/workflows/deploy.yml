@@ -18,6 +18,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     
+    defaults:
+      run:
+        working-directory: home-loan-optimizer
+    
     steps:
     - name: Checkout
       uses: actions/checkout@v4
@@ -30,14 +34,10 @@ jobs:
         cache-dependency-path: home-loan-optimizer/package-lock.json
     
     - name: Install dependencies
-      run: |
-        cd home-loan-optimizer
-        npm ci
+      run: npm ci
     
     - name: Build
-      run: |
-        cd home-loan-optimizer
-        npm run build
+      run: npm run build
       env:
         NODE_ENV: production
     

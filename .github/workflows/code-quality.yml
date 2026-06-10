@@ -10,6 +10,10 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     
+    defaults:
+      run:
+        working-directory: home-loan-optimizer
+    
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
@@ -22,18 +26,14 @@ jobs:
         cache-dependency-path: home-loan-optimizer/package-lock.json
     
     - name: Install dependencies
-      run: |
-        cd home-loan-optimizer
-        npm ci
+      run: npm ci
     
     - name: Run ESLint
-      run: |
-        cd home-loan-optimizer
-        npm run lint || echo "Linting completed with warnings"
+      run: npm run lint || echo "Linting completed with warnings"
+      continue-on-error: true
     
     - name: Check formatting
-      run: |
-        cd home-loan-optimizer
-        npx prettier --check "src/**/*.{ts,tsx,js,jsx,json,css}" || echo "Formatting check completed"
+      run: npx prettier --check "src/**/*.{ts,tsx,js,jsx,json,css}" || echo "Formatting check completed"
+      continue-on-error: true
 
 # Made with Bob
